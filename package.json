@@ -1,0 +1,13 @@
+{
+  "name": "fintech",
+  "version": "1.0.0",
+  "description": "Tela de cadastro de despesa — projeto Fintech",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./css/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

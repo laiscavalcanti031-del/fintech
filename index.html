@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova despesa — Fintech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <div
+        class="w-full flex flex-col flex-1 min-h-screen bg-surface md:flex-row"
+      >
+        <aside
+          class="hidden md:flex md:flex-col md:w-80 md:shrink-0 md:p-8 md:text-white md:bg-[linear-gradient(160deg,#155a31,#0f4324)]"
+        >
+          <div class="flex items-center gap-2.5 font-extrabold text-base mb-12">
+            <span
+              class="w-[30px] h-[30px] rounded-[9px] bg-white/20 grid place-items-center"
+              >F</span
+            >
+            Fintech
+          </div>
+          <h2 class="text-[23px] font-extrabold tracking-tight leading-tight">
+            Registrar uma nova despesa
+          </h2>
+          <p class="text-white/80 text-sm mt-3">
+            Mantenha seu controle em dia anotando para onde o dinheiro vai. Leva
+            menos de 30 segundos.
+          </p>
+          <div class="mt-12 flex flex-col gap-4">
+            <div class="flex items-start gap-3 text-[13.5px] text-white/75">
+              <span
+                class="w-6 h-6 rounded-full bg-white/15 grid place-items-center text-xs font-bold shrink-0 text-white"
+                >1</span
+              >
+              <div>
+                <b class="block text-white text-sm">Informe o valor</b>Quanto
+                você gastou?
+              </div>
+            </div>
+            <div class="flex items-start gap-3 text-[13.5px] text-white/75">
+              <span
+                class="w-6 h-6 rounded-full bg-white/15 grid place-items-center text-xs font-bold shrink-0 text-white"
+                >2</span
+              >
+              <div>
+                <b class="block text-white text-sm">Categorize</b>Escolha onde
+                se encaixa.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 text-[13.5px] text-white/75">
+              <span
+                class="w-6 h-6 rounded-full bg-white/15 grid place-items-center text-xs font-bold shrink-0 text-white"
+                >3</span
+              >
+              <div>
+                <b class="block text-white text-sm">Salve</b>Pronto, já entra no
+                seu mês.
+              </div>
+            </div>
+          </div>
+          <div class="flex-1"></div>
+          <p class="text-[12.5px] text-white/70 border-t border-white/20 pt-4">
+            Dica: ative “Repetir todo mês” para contas fixas como aluguel e
+            assinaturas.
+          </p>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0">
+          <header
+            class="sticky top-0 z-20 flex items-center gap-3 p-4 bg-white/90 backdrop-blur-md border-b border-border-soft md:px-8 md:py-6"
+          >
+            <div class="flex flex-col leading-tight">
+              <h1 class="text-[17px] font-bold tracking-tight">Nova despesa</h1>
+              <span class="text-xs text-ink-soft">Junho · Conta corrente</span>
+            </div>
+          </header>
+
+          <form
+            class="flex-1 overflow-y-auto p-4 pt-6 pb-8 flex flex-col gap-6 md:p-8"
+          >
+            <div
+              class="bg-surface-2 border border-border-soft rounded-card p-6 text-center"
+            >
+              <div
+                class="text-xs font-bold uppercase tracking-[0.08em] text-ink-soft"
+              >
+                Valor
+              </div>
+              <div class="flex items-center justify-center gap-1.5 mt-3">
+                <span class="font-mono text-[26px] text-ink-muted font-medium"
+                  >R$</span
+                >
+                <input
+                  type="text"
+                  inputmode="decimal"
+                  placeholder="0,00"
+                  value="428,90"
+                  aria-label="Valor da despesa"
+                  class="border-0 bg-transparent text-center font-mono text-[46px] font-medium tracking-tight text-neg w-full max-w-[320px] min-w-0 p-0 focus:outline-none placeholder:text-border-strong"
+                />
+              </div>
+              <div class="text-[12.5px] text-ink-soft mt-1.5">
+                Toque para editar · use vírgula para centavos
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[7px]">
+              <label for="desc" class="text-[13px] font-bold text-ink"
+                >Descrição</label
+              >
+              <input
+                id="desc"
+                type="text"
+                placeholder="Ex.: Mercado da semana"
+                value="Mercado da semana"
+                class="text-[15px] text-ink bg-surface border border-border-strong rounded-xl px-3 py-3 w-full transition focus:outline-none focus:border-brand-500 focus:ring-[3px] focus:ring-brand-50 placeholder:text-ink-soft"
+              />
+            </div>
+
+            <div class="flex flex-col gap-[7px]">
+              <span class="text-[13px] font-bold text-ink">Categoria</span>
+              <div class="flex flex-wrap gap-2">
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" checked />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"
+                    aria-hidden="true"
+                    class="w-[14px] h-[14px] shrink-0 text-brand-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M24-16C10.7-16 0-5.3 0 8S10.7 32 24 32l45.3 0c3.9 0 7.2 2.8 7.9 6.6l52.1 286.3c6.2 34.2 36 59.1 70.8 59.1L456 384c13.3 0 24-10.7 24-24s-10.7-24-24-24l-255.9 0c-11.6 0-21.5-8.3-23.6-19.7l-5.1-28.3 303.6 0c30.8 0 57.2-21.9 62.9-52.2L568.9 69.9C572.6 50.2 557.5 32 537.4 32l-412.7 0-.4-2c-4.8-26.6-28-46-55.1-46L24-16zM208 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm224 0a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"
+                    />
+                  </svg>
+                  Alimentação
+                </label>
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                    aria-hidden="true"
+                    class="w-[14px] h-[14px] shrink-0 text-brand-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M298.2 72.6C310.5 61.2 329.5 61.2 341.7 72.6L432 156.3L432 144C432 126.3 446.3 112 464 112L496 112C513.7 112 528 126.3 528 144L528 245.5L565.8 280.6C575.4 289.6 578.6 303.5 573.8 315.7C569 327.9 557.2 336 544 336L528 336L528 512C528 547.3 499.3 576 464 576L176 576C140.7 576 112 547.3 112 512L112 336L96 336C82.8 336 71 327.9 66.2 315.7C61.4 303.5 64.6 289.5 74.2 280.6L298.2 72.6zM280 288C266.7 288 256 298.7 256 312L256 392C256 405.3 266.7 416 280 416L360 416C373.3 416 384 405.3 384 392L384 312C384 298.7 373.3 288 360 288L280 288z"
+                    />
+                  </svg>
+                  Moradia
+                </label>
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"
+                    aria-hidden="true"
+                    class="w-[14px] h-[14px] shrink-0 text-brand-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M480 0c88.4 0 160 71.6 160 160l0 224c0 35.3-28.7 64-64 64l-5.6 0c-13.2 37.3-48.6 64-90.4 64s-77.3-26.7-90.4-64l-139.1 0c-13.2 37.3-48.7 64-90.4 64s-77.2-26.7-90.4-64L64 448c-35.3 0-64-28.7-64-64L0 96C0 43 43 0 96 0L480 0zM160 368a48 48 0 1 0 0 96 48 48 0 1 0 0-96zm320 0a48 48 0 1 0 0 96 48 48 0 1 0 0-96zm0-304c-17.7 0-32 14.3-32 32l0 192c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-128c0-53-43-96-96-96zM248 224l104 0c17.7 0 32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-104 0 0 160zM96 64C78.3 64 64 78.3 64 96l0 96c0 17.7 14.3 32 32 32l104 0 0-160-104 0z"
+                    />
+                  </svg>
+                  Transporte
+                </label>
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    aria-hidden="true"
+                    class="w-[14px] h-[14px] shrink-0 text-brand-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M2.7 160c-1.8-5-2.7-10.4-2.7-16 0-26.5 21.5-48 48-48 3.9 0 7.6 .5 11.2 1.3-2.1-5.4-3.2-11.2-3.2-17.3 0-26.5 21.5-48 48-48 12.8 0 24.4 5 33 13.2 5-25.8 27.7-45.2 55-45.2s49.9 19.4 55 45.2c8.6-8.2 20.2-13.2 33-13.2 26.5 0 48 21.5 48 48 0 6.1-1.1 11.9-3.2 17.3 3.6-.9 7.4-1.3 11.2-1.3 26.5 0 48 21.5 48 48 0 5.6-1 11-2.7 16L2.7 160zm259.7 48l-27.6 304-85.6 0-27.6-304 140.9 0zM0 208l73.4 0 27.6 304-25.8 0c-24.6 0-45.2-18.5-47.7-43L0 208zM283 512l27.6-304 73.4 0-27.5 261c-2.6 24.4-23.2 43-47.7 43L283 512z"
+                    />
+                  </svg>
+                  Lazer
+                </label>
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    aria-hidden="true"
+                    class="w-[14px] h-[14px] shrink-0 text-brand-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M189.3 189.3L290.7 290.7 363 218.5c13.5-13.5 21-31.7 21-50.7 0-39.6-32.1-71.8-71.8-71.8-19 0-37.3 7.6-50.7 21l-72.2 72.2zm219 74.5L231.8 440.2c-25.5 25.5-60 39.8-96 39.8-75 0-135.8-60.8-135.8-135.8 0-36 14.3-70.5 39.8-96L216.2 71.8c25.5-25.5 60-39.8 96-39.8 75 0 135.8 60.8 135.8 135.8 0 36-14.3 70.5-39.8 96z"
+                    />
+                  </svg>
+                  Saúde
+                </label>
+                <label
+                  class="inline-flex items-center gap-[7px] cursor-pointer px-[14px] py-[9px] rounded-full border border-border-strong bg-surface text-[13.5px] font-semibold text-ink-muted transition select-none hover:border-brand-500 hover:text-ink has-checked:bg-brand-50 has-checked:border-brand-500 has-checked:text-brand-500"
+                >
+                  <input type="radio" name="cat" class="sr-only" />
+                  Outros
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-[7px]">
+                <label for="data" class="text-[13px] font-bold text-ink"
+                  >Data</label
+                >
+                <input
+                  id="data"
+                  type="date"
+                  value="2026-06-11"
+                  class="text-[15px] text-ink bg-surface border border-border-strong rounded-xl px-3 py-3 w-full transition focus:outline-none focus:border-brand-500 focus:ring-[3px] focus:ring-brand-50"
+                />
+              </div>
+              <div class="flex flex-col gap-[7px]">
+                <label for="conta" class="text-[13px] font-bold text-ink"
+                  >Conta / método</label
+                >
+                <select
+                  id="conta"
+                  class="text-[15px] text-ink bg-surface border border-border-strong rounded-xl px-3 py-3 pr-10 w-full transition cursor-pointer appearance-none bg-[url('data:image/svg+xml;utf8,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2212%22%20height=%2212%22%20viewBox=%220%200%2012%2012%22><path%20d=%22M2%204l4%204%204-4%22%20stroke=%22%238a948b%22%20stroke-width=%221.6%22%20fill=%22none%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/></svg>')] bg-no-repeat bg-position-[right_14px_center] focus:outline-none focus:border-brand-500 focus:ring-[3px] focus:ring-brand-50"
+                >
+                  <option>Conta corrente</option>
+                  <option>Cartão de crédito</option>
+                  <option>Dinheiro</option>
+                  <option>Pix</option>
+                  <option>Vale-refeição</option>
+                </select>
+              </div>
+            </div>
+
+            <span
+              class="text-[11.5px] font-bold uppercase tracking-[0.07em] text-ink-soft mt-2"
+              >Opcional</span
+            >
+
+            <label
+              class="flex items-center gap-4 p-4 border border-border-soft rounded-xl bg-surface cursor-pointer"
+            >
+              <div class="flex-1">
+                <b class="text-sm font-bold block">Repetir todo mês</b>
+                <span class="text-[12.5px] text-ink-soft"
+                  >Crie automaticamente para contas fixas.</span
+                >
+              </div>
+              <span class="relative w-[46px] h-[27px] shrink-0 group">
+                <input
+                  type="checkbox"
+                  class="peer absolute inset-0 w-full h-full opacity-0 cursor-pointer m-0"
+                />
+                <span
+                  class="absolute inset-0 rounded-full bg-border-strong transition-colors duration-200 peer-checked:bg-brand-500"
+                ></span>
+                <span
+                  class="absolute top-[3px] left-[3px] w-[21px] h-[21px] rounded-full bg-white shadow-sm transition-transform duration-200 peer-checked:translate-x-[19px]"
+                ></span>
+              </span>
+            </label>
+
+            <div class="flex flex-col gap-[7px]">
+              <label for="obs" class="text-[13px] font-bold text-ink"
+                >Observações</label
+              >
+              <textarea
+                id="obs"
+                placeholder="Alguma anotação sobre essa despesa…"
+                class="text-[15px] text-ink bg-surface border border-border-strong rounded-xl px-3 py-3 w-full min-h-20 resize-y leading-relaxed transition focus:outline-none focus:border-brand-500 focus:ring-[3px] focus:ring-brand-50 placeholder:text-ink-soft"
+              ></textarea>
+            </div>
+          </form>
+
+          <div
+            class="sticky bottom-0 z-20 flex gap-3 p-4 bg-white/90 backdrop-blur-md border-t border-border-soft pb-[max(1rem,env(safe-area-inset-bottom))] md:px-8"
+          >
+            <button
+              type="button"
+              class="inline-flex items-center justify-center gap-2 font-bold text-[15px] px-[18px] py-[13px] rounded-xl border border-border-strong bg-surface text-ink transition active:translate-y-px hover:bg-surface-2 whitespace-nowrap"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center gap-2 font-bold text-[15px] px-[18px] py-[13px] rounded-xl bg-brand-500 text-white border border-transparent transition active:translate-y-px hover:bg-brand-600 whitespace-nowrap flex-1 sm:flex-none sm:min-w-[200px] sm:ml-auto"
+            >
+              Salvar despesa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
